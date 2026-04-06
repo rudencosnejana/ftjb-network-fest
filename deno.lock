@@ -3,6 +3,7 @@
   "specifiers": {
     "npm:@tailwindcss/vite@^4.2.2": "4.2.2_vite@7.3.1__picomatch@4.0.4",
     "npm:astro@^6.1.3": "6.1.3_vite@7.3.1__picomatch@4.0.4",
+    "npm:sharp@~0.34.5": "0.34.5",
     "npm:tailwindcss@^4.2.2": "4.2.2"
   },
   "npm": {
@@ -2316,6 +2317,7 @@
       "dependencies": [
         "npm:@tailwindcss/vite@^4.2.2",
         "npm:astro@^6.1.3",
+        "npm:sharp@~0.34.5",
         "npm:tailwindcss@^4.2.2"
       ]
     }
