@@ -1,68 +1,142 @@
 ---
 import "../styles/global.css";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import logo from '../assets/logo.png'; // Image is 1600x900
-import coperta from '../assets/coperta.png'; // Image is 1600x900
-import brasov from '../assets/brasov.svg'; // Image is 1600x900
-import retea from '../assets/retea.svg'; // Image is 1600x900
+import logo from "../assets/logo.png"; // Image is 1600x900
+import coperta from "../assets/coperta.png"; // Image is 1600x900
+import brasov from "../assets/brasov.svg"; // Image is 1600x900
+import retea from "../assets/retea.svg"; // Image is 1600x900
 
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+const manuale = ["Manual 1", "Manual 2", "Manual 3"];
+const programe = ["1", "2", "3"];
+const sponsori=["Sponsor 1", "Sponsor 2", "Sponsor 3"]
 ---
 
 <Layout>
+    <header class="fixed w-full bg-white z-100">
+        <div class="py-8 px-16 flex flex-row justify-between shadow">
+            <Image src={logo} height={64} alt="" />
 
-<header class="fixed w-full bg-white z-100">
-    <div class="py-8 px-16 flex flex-row justify-between">
-        <Image src={logo} height={64} alt=""/>
+            <nav class="flex flex-row items-center gap-4">
+                <a
+                    class="hover:text-secondary text-primary font-bold text-lg px-4 py-2"
+                    href="#manuale">Manuale</a
+                >
+                <a
+                    class="hover:text-secondary text-primary font-bold text-lg px-4 py-2"
+                    href="#program">Program</a
+                >
+                <a
+                    class="hover:text-secondary text-primary font-bold text-lg px-4 py-2"
+                    href="#sponsori-si-parteneri">Sponsori și Parteneri</a
+                >
+            </nav>
+        </div>
+    </header>
 
-        <nav class="flex flex-row items-center gap-4">
-            <a class="hover:text-secondary text-primary font-bold text-lg px-4 py-2" href="#manuale">Manuale</a>
-            <a class="hover:text-secondary text-primary font-bold text-lg px-4 py-2" href="#program">Program</a>
-            <a class="hover:text-secondary text-primary font-bold text-lg px-4 py-2" href="#sponsori-si-parteneri">Sponsori și Parteneri</a>
-        </nav>
-    </div>
-</header>
-
-<div class={ `relative overflow-hidden pt-56 pb-26` }>
-
-    <div class="absolute -top-50 left-0">
-        <Image src={coperta} class="" alt=""/>
-    </div>
-    <div class="absolute top-0 left-0 bg-linear-to-b from-[#2F0060] from-10% via-primary/65 via-70% to-black/90 z-1 w-full h-full"> </div>
-
-    <div class="pl-20 text-white text-[2.75rem] z-10 w-fit" style="position: inherit;">
-        <div class="relative w-fit">
-
-            <Image  class="absolute top-1/3 left-1/2"  src={retea} alt=""/>
-            <h1 class="text-[10rem] text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold">NETWORK FEST</h1>
-            <Image class="absolute left-1/2 top-37 -translate-x-58" src={brasov} alt=""/>
-
-
+    <div class={`relative overflow-hidden pt-56 pb-26`}>
+        <div class="absolute -top-50 left-0">
+            <Image src={coperta} class="" alt="" />
+        </div>
+        <div
+            class="absolute top-0 left-0 bg-linear-to-b from-[#2F0060] from-10% via-primary/65 via-70% to-black/90 z-1 w-full h-full"
+        >
         </div>
 
-        <p class="pt-26">Evenimentul care ne unește</p>
+        <div
+            class="pl-20 text-white text-[2.75rem] z-10 w-fit"
+            style="position: inherit;"
+        >
+            <div class="relative w-fit">
+                <Image class="absolute top-1/3 left-1/2" src={retea} alt=""/>
+                <h1
+                    class="text-[10rem] text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold"
+                >
+                    NETWORK FEST
+                </h1>
+                <Image
+                    class="absolute left-1/2 top-37 -translate-x-58"
+                    src={brasov}
+                    alt=""
+                />
+            </div>
 
-        <div class="py-10">
-            <time><b>25 aprilie 2026</b></time>
-            <div>Interval orar: <b>11:00-16:00</b></div>
+            <p class="pt-26">Evenimentul care ne unește</p>
+
+            <div class="py-10">
+                <time><b>25 aprilie 2026</b></time>
+                <div>Interval orar: <b>11:00-16:00</b></div>
+            </div>
+
+            <p>Locația: Afi MALL, zona Food Court</p>
         </div>
-
-        <p>Locația: Afi MALL, zona Food Court</p>
     </div>
-</div>
 
-<div>
-    <h1 id="manuale" class="bg-green-100 h-screen">Manuale</h1>
-</div>
+    <div>
+        <h1 id="manuale" class="pt-8 text-center text-primary font-bold" >Manuale</h1>
+        <div class="flex flex-row gap-4 justify-center py-8 shadow-black/50">
+            {
+                manuale.map((titlu) => (
+                    <div class="flex flex-col border-1 rounded-[10px] p-8 gap-6 items-center border-black/5 shadow-lg shadow-black/3">
+                        {titlu}
+                        <svg
+                            width="40"
+                            viewBox="0 0 134 149"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M7.41699 126.084V31.1501C7.41699 22.8427 7.41699 18.6889 9.03376 15.5159C10.4558 12.7248 12.725 10.4556 15.5162 9.03351C18.6892 7.41675 22.843 7.41675 31.1504 7.41675H102.351C110.658 7.41675 114.812 7.41675 117.985 9.03351C120.776 10.4556 123.045 12.7248 124.467 15.5159C126.084 18.6889 126.084 22.8427 126.084 31.1501V111.25H22.2504C14.0581 111.25 7.41699 117.891 7.41699 126.084ZM7.41699 126.084C7.41699 134.276 14.0581 140.917 22.2504 140.917H126.084M44.5004 37.0835H89.0005M44.5004 66.7502H89.0005M118.667 111.25V140.917"
+                                stroke="#7625C5"
+                                stroke-width="14.8334"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    
+                    manual de folosire lorem ipsum</div>
+                ))
+            }
+        </div>
+    </div>
 
-<div>
-    <h1 id="program" class="bg-green-100 h-screen">Program</h1>
-</div>
+    <div class="py-8 bg-black/5">
+        <h1 id="programe"class="py-8 text-center bg-primary text-white font-semibold">Program</h1>
+            <div>
+                {
+                    programe.map((titlu)=> (
+                        <div class="bg-white p-8 border-b border-black/5 text-primary" >
+                            <div class="divide-x-1"><b class="pr-5"> ora {titlu}</b><sb class="pl-3">Deschidere</sb></div>
+                                <div class="text-black/30 thin ">nu stiu care e programul</div>
+                        </div>
 
-<div>
-    <h1 id="sponsori-si-parteneri" class="bg-green-100 h-screen">Sponsori și Parteneri</h1>
-</div>
+                    ))
+                }
+                
+            </div>
+    </div>
 
+    <div>
+    <div class="bg-black/5">
+        <h1 id="sponsori-si-parteneri">
+            <div class="text-primary font-bold bg-white text-center border-b-1 border-black/5 p-10">Sponsori și Parteneri</div>
+        </h1>
+            <div>{
+                sponsori.map((titlu)=>(
+                    <div class="bg-white p-5 text-black/40 text-center border-b-1 border-black/5">
+                        <r class="py-5">{titlu}</r>
+                        <div class="flex flex-center justify-center">
+                          <svg width="50" height="80" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M62.0156 124.031C27.7653 124.031 0 96.266 0 62.0156C0 27.7653 27.7653 0 62.0156 0C96.266 0 124.031 27.7653 124.031 62.0156C124.031 96.266 96.266 124.031 62.0156 124.031ZM62.0156 119.602C93.8195 119.602 119.602 93.8195 119.602 62.0156C119.602 30.2117 93.8195 4.42969 62.0156 4.42969C30.2117 4.42969 4.42969 30.2117 4.42969 62.0156C4.42969 93.8195 30.2117 119.602 62.0156 119.602Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.025 40.8119C16.679 34.4648 20.4873 30.7755 21.5156 29.732C22.5439 28.6892 24.0038 29.1979 24.9815 29.732C25.9592 30.2668 50.4668 54.8142 51.5609 56.0469C52.6544 57.2796 53.8137 59.1186 50.6743 59.1186C47.5343 59.1186 16.6872 58.849 14.025 58.6655C11.3621 58.4813 10.5762 56.9284 10.5762 55.602C10.5762 54.2757 11.3703 47.1597 14.025 40.8119ZM43.6735 13.5042C50.039 10.8926 54.5769 11.0641 56.0419 11.0539C57.5068 11.0438 58.1789 12.4354 58.4927 13.5042C58.806 14.5736 59.0338 49.4701 58.9357 51.1148C58.837 52.7601 58.8642 54.5845 56.6443 52.3639C54.4237 50.144 32.8018 28.1411 31.0496 26.1288C29.2967 24.1158 29.839 22.4617 30.7774 21.5238C31.7153 20.586 37.3074 16.1164 43.6735 13.5042ZM82.5864 14.025C88.9336 16.679 92.6228 20.4873 93.6664 21.5156C94.7092 22.5439 94.2005 24.0038 93.6664 24.9815C93.1316 25.9592 68.5842 50.4668 67.3515 51.5609C66.1188 52.6544 64.2798 53.8137 64.2798 50.6743C64.2798 47.5343 64.5494 16.6872 64.7329 14.025C64.9171 11.3621 66.47 10.5762 67.7963 10.5762C69.1227 10.5762 76.2387 11.3703 82.5864 14.025ZM109.894 43.6735C112.506 50.039 112.334 54.5769 112.344 56.0419C112.355 57.5068 110.963 58.1789 109.894 58.4927C108.825 58.806 73.9283 59.0338 72.2836 58.9357C70.6383 58.837 68.8139 58.8642 71.0344 56.6443C73.2544 54.4237 95.2572 32.8018 97.2696 31.0496C99.2826 29.2967 100.937 29.839 101.875 30.7774C102.812 31.7153 107.282 37.3074 109.894 43.6735ZM109.373 83.2193C106.719 89.5664 102.911 93.2557 101.883 94.2992C100.854 95.342 99.3946 94.8333 98.4169 94.2992C97.4392 93.7644 72.9316 69.217 71.8375 67.9843C70.744 66.7516 69.5847 64.9126 72.7241 64.9126C75.8641 64.9126 106.711 65.1822 109.373 65.3657C112.036 65.5499 112.822 67.1028 112.822 68.4292C112.822 69.7555 112.028 76.8715 109.373 83.2193ZM79.7249 110.527C73.3594 113.139 68.8215 112.967 67.3565 112.977C65.8916 112.987 65.2195 111.596 64.9057 110.527C64.5924 109.458 64.3646 74.5611 64.4627 72.9164C64.5614 71.2711 64.5342 69.4467 66.7541 71.6673C68.9746 73.8872 90.5966 95.8901 92.3488 97.9024C94.1017 99.9154 93.5594 101.57 92.6209 102.507C91.6831 103.445 86.0903 107.915 79.7242 110.527H79.7249ZM40.8119 110.006C34.4648 107.352 30.7755 103.544 29.732 102.516C28.6892 101.487 29.1979 100.027 29.732 99.0497C30.2668 98.072 54.8142 73.5644 56.0469 72.4703C57.2796 71.3768 59.1186 70.2175 59.1186 73.3569C59.1186 76.4969 58.849 107.344 58.6655 110.006C58.4813 112.669 56.9284 113.455 55.602 113.455C54.2757 113.455 47.1597 112.661 40.8119 110.006ZM13.5042 80.3577C10.8926 73.9922 11.0641 69.4543 11.0539 67.9894C11.0438 66.5244 12.4354 65.8523 13.5042 65.5385C14.5736 65.2252 49.4701 64.9974 51.1148 65.0955C52.7601 65.1942 54.5845 65.167 52.3639 67.3869C50.144 69.6075 28.1411 91.2294 26.1288 92.9817C24.1158 94.7345 22.4617 94.1922 21.5238 93.2538C20.586 92.3159 16.1164 86.7231 13.5042 80.357V80.3577Z" fill="black"/>
+                                </svg></div>
+                        <div class=" text-thin text-black/20 text-xs">Descriere aceasta companie...</div>
+                        
+                    </div>
+                ))
+                }</div>
+        </div>
+    </div>
 </Layout>
+
