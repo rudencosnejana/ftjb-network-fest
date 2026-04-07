@@ -7,5 +7,9 @@
         "semiColons": true,
         "singleQuote": false,
         "proseWrap": "preserve"
+    },
+    "allowScripts": {
+        "allow": ["npm:sharp"],
+        "deny": ["npm:esbuild@0.27.7", "npm:sharp@0.34.5"]
     }
 }
