@@ -14,44 +14,41 @@ import participanti from "../content/participanti.js";
 import program from "../content/program.js";
 
 const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
+
+const tw_p_x = "px-3 xl:px-26"
 ---
 
 <Layout>
     <Header />
 
     <main>
-        <div class="relative overflow-hidden pt-56 pb-26 min-h-screen">
-            <div class="absolute top-0 left-0 h-full">
+        <div class="relative overflow-hidden pt-48 md:pt-56 pb-26 min-h-screen">
+            <div class="absolute top-0 left-0 w-full h-full">
                 <img
                     loading={"eager"}
                     src="https://res.cloudinary.com/djtxbxlel/image/upload/f_auto/q_auto/coperta_taiat_uj9h5u.png"
-                    class="object-cover"
+                    class="object-cover h-full w-full"
                     alt=""
                 />
             </div>
             <div
-                class="absolute top-0 left-0 bg-linear-to-b from-[#2F0060] from-10% via-primary/65 via-70% to-black/90 z-1 w-full h-full"
+                class="absolute top-0 left-0 bg-linear-to-b from-[#2F0060] from-10% via-primary/75 via-70% to-black/90 z-1 w-full h-full"
             >
             </div>
             <div
-                class="pl-20 text-white text-[2.75rem] z-10 w-fit"
+                class:list={[ "text-white text-[1.55rem] md:text-[2rem] lg:text-[2.75rem] z-10 w-full h-full", tw_p_x]}
                 style="position: inherit"
             >
-                <div class="relative w-fit">
-                    <Image
-                        class="absolute top-1/3 left-1/2"
-                        src={retea}
-                        loading={"eager"}
-                        alt=""
-                    />
+                <div class="flex flex-col items-center md:block relative w-fit">
                     <h1
-                        class="text-[10rem] text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold"
+                        class="text-[3.15rem] md:text-[6rem] lg:text-[8rem] text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold"
                     >
                         NETWORK FEST
                     </h1>
                     <Image
-                        class="absolute left-1/2 top-37 -translate-x-58"
+                        class="absolute w-[180px] md:w-[290px] lg:w-[370px] left-1/2 top-11 md:top-22 lg:top-28 -translate-x-24 md:-translate-x-40 lg:-translate-x-50"
                         src={brasov}
+                        width={370}
                         loading={"eager"}
                         alt=""
                     />
@@ -63,11 +60,17 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
                 </div>
                 <p>Locația: Afi MALL, zona Food Court</p>
             </div>
+                    <Image
+                        class="absolute bottom-0 right-0 z-20"
+                        src={retea}
+                        loading={"eager"}
+                        alt=""
+                    />
         </div>
 
-        <div class="py-8 bg-purple-50">
+        <div class="lg:py-8 bg-purple-50" style="font-size: 18px">
             <div
-                class="w-230 m-auto border border-olive-200 rounded-xl overflow-hidden"
+                class="w-full lg:w-230 m-auto lg:border lg:border-olive-200 lg:rounded-xl overflow-hidden"
             >
                 <h1
                     id="program"
@@ -79,7 +82,7 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
                     {
                         program.map((p) => (
                             <div
-                                class="bg-white py-3 lg:w-210 m-auto text-primary"
+                                class="bg-white px-3 lg:px-0 py-3 lg:w-210 m-auto text-primary"
                             >
                                 <div class="divide-x-1 flex flex-row pb-2">
                                     <b class="block min-w-[11ch]">{p.timp}</b>
@@ -97,16 +100,16 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
             </div>
         </div>
 
-        <div>
-            <div class="bg-black/5">
+        <div style="font-size: 18px">
+            <div class="bg-purple-50">
                 <h1
                     id="participanti"
-                    class="text-primary text-xl font-bold bg-white text-center p-10"
+                    class="text-primary text-xl font-bold bg-white text-center p-10  lg:rounded-t-[3rem] overflow-hidden"
                 >
                     Participanți
                 </h1>
                 <div
-                    class="flex flex-row justify-center flex-wrap bg-white gap-2"
+                    class="flex flex-row justify-center divide-y-1 divide-olive-100 flex-wrap bg-white gap-4"
                 >
                     {
                         participanti.map((
@@ -125,38 +128,66 @@ const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
             </div>
         </div>
 
-        <div><div class="pt-22 pb-11 w-240 m-auto flex flex-col items-center">
-            <Image src={logo} class="object-contain" class="pb-10" height={64} alt="" />
-            <div class="flex flex-col gap-y-4">
-                <div>Federația Tinerilor din Județul Brașov este o organizație apolitică și non-profit care reunește ONG-uri de tineret și susține implicarea tinerilor (16-35 ani).</div> 
-                <div>Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus Brașov, Meraki Impact Club, Asociația Generației Creative.</div>
-                <div>Membri observatori: Myndself Brașov, BEST Brașov, AIESEC Brașov, BSPP. Brașov</div> 
-                <div>Activăm pe 6 piloni: educație, participare civică, sănătate, comunitate, incluziune și sustenabilitate, creând oportunități și spații reale de dezvoltare.</div>
+        <div>
+            <div class="px-3 pt-22 pb-11 w-full lg:w-240 m-auto flex flex-col items-center">
+                <Image
+                    src={logo}
+                    class="object-contain"
+                    class="pb-10"
+                    height={64}
+                    alt=""
+                />
+                <div class="flex flex-col gap-y-4">
+                    <div>
+                        Federația Tinerilor din Județul Brașov este o
+                        organizație apolitică și non-profit care reunește
+                        ONG-uri de tineret și susține implicarea tinerilor
+                        (16-35 ani).
+                    </div>
+                    <div>
+                        Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus
+                        Brașov, Meraki Impact Club, Asociația Generației
+                        Creative.
+                    </div>
+                    <div>
+                        Membri observatori: Myndself Brașov, BEST Brașov, AIESEC
+                        Brașov, BSPP. Brașov
+                    </div>
+                    <div>
+                        Activăm pe 6 piloni: educație, participare civică,
+                        sănătate, comunitate, incluziune și sustenabilitate,
+                        creând oportunități și spații reale de dezvoltare.
+                    </div>
+                </div>
             </div>
-        </div></div>
-
+        </div>
     </main>
 
     <footer class="pt-11 pb-12 bg-purple-50">
-        <div class="flex flex-row  w-400 m-auto "><div class="w-[50ch]">
-            <div class="relative w-fit pb-7">
-                <h1
-                    class="text-[3rem] text-shadow-[0.66px_2.66px_5.49px_rgb(0_0_0_/_0.3)] font-extrabold"
-                >
-                    NETWORK FEST
-                </h1>
-                <Image
-                    class="absolute left-1/2 top-10 -translate-x-[75px]"
-                    src={brasov}
-                    width={150}
-                    loading={"eager"}
-                    alt=""
-                />
+        <div class="flex flex-row w-full lg:w-400 m-auto px-3">
+            <div class="w-full md:w-[50ch]">
+                <div class="relative w-fit pb-7">
+                    <h1
+                        class="text-[3rem] text-shadow-[0.66px_2.66px_5.49px_rgb(0_0_0_/_0.3)] font-extrabold"
+                    >
+                        NETWORK FEST
+                    </h1>
+                    <Image
+                        class="absolute left-1/2 top-10 -translate-x-[75px]"
+                        src={brasov}
+                        width={150}
+                        loading={"eager"}
+                        alt=""
+                    />
+                </div>
+                este un eveniment apolitic dedicat promovării voluntariatului și
+                oportunităților de dezvoltare personală și profesională pentru
+                tinerii sub 35 de ani, oferind totodată un cadru de conectare
+                între organizațiile participante.
+                <div class="pt-4 bold text-olive-600">
+                    &copy; FTJ Brașov, 2026
+                </div>
             </div>
-            este un eveniment apolitic dedicat promovării voluntariatului și oportunităților de dezvoltare personală și profesională pentru tinerii sub 35 de ani, oferind totodată un cadru de conectare între organizațiile participante.
-            <div class="pt-4 bold text-olive-600">
-                &copy; FTJ Brașov, 2026
-            </div>
-        </div></div>
+        </div>
     </footer>
 </Layout>
