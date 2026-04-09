@@ -4,14 +4,14 @@ export default [
         titlu: "Desfășurarea târgului ONG-urilor",
         public: true,
         descr:
-            "Vizitatorii vor explora standurile, unde fiecare organizație participantă își va promova activitatea prin materiale promoționale, oportunități de voluntariat sau alte inițiative pe care dorește să le aducă în atenția publicului.",
+            "Vizitatorii vor explora standurile, unde fiecare organizație participantă își va promova activitatea prin materiale promoționale, oportunități de voluntariat sau alte inițiative pe care dorește să le aducă în atenția publicului.<br>În plus, vizitatorii vor interacționa cu aceste organizații pentru a primi stikere, care le vor oferi posibilitatea de a participa la <a class='text-primary hover:text-secondary underline' href='#tombola'>Tombolă</a>",
     },
     {
-        timp: "???",
-        titlu: "Extragera cîsțigătorului",
+        timp: "-",
+        titlu: "Extragera câștigătorilor",
         public: true,
         descr:
-            "Extragerea câștigătorilor va avea loc la finalul evenimentului, iar participanții vor putea afla rezultatele urmărind pagina Federației Tinerilor din Județul Brașov",
+            "Extragerea câștigătorilor pentru <a class='text-primary hover:text-secondary underline' href='#tombola'>Tombolă</a> va avea loc la finalul evenimentului, iar participanții vor putea afla rezultatele urmărind pagina Federației Tinerilor din Județul Brașov",
     },
     {
         timp: "18:30",

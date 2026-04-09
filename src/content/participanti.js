@@ -1,7 +1,7 @@
 /** @type {{nume: string, descriere: string, domenii: string[], logo: string, legaturi: [string,string][]}[]}*/
 export default [
     {
-        "nume": "ATB",
+        "nume": "ATB Brașov",
         "descriere":
             "Asociația reprezintă și apără interesele elevilor și studenților basarabeni din Brașov, promovând drepturile academice și valorile tradiționale. Prin activități educative, culturale și sociale, organizația sprijină integrarea tinerilor elevi și studenți basarabeni, dezvoltarea abilităților și crearea unui cadru în care fiecare student poate valorifica potențialul său și se poate conecta cu comunitatea.",
         "domenii": ["educație", "advocacy", "cultură"],
@@ -17,7 +17,7 @@ export default [
         ],
     },
     {
-        "nume": "Tot mai verde ",
+        "nume": "Tot mai verde",
         "descriere":
             "Asociația promovează un mediu curat și sănătos prin proiecte educaționale, campanii de conștientizare și acțiuni de protecție a mediului. Dezvoltăm programe pentru reciclare, reutilizare și responsabilitate ecologică, implicăm comunitatea și colaborăm cu instituții locale pentru promovarea unor politici publice favorabile mediului, stimulând schimbarea comportamentului civic în rândul cetățenilor.",
         "domenii": ["mediu", "educație ecologică", "politici publice"],
@@ -101,7 +101,7 @@ export default [
         ],
     },
     {
-        "nume": "BEST ",
+        "nume": "BEST",
         "descriere":
             "BEST Brașov facilitează comunicarea între Universitatea Transilvania, studenți și companii prin competiții IT, workshop-uri și training-uri. Organizăm evenimente care dezvoltă competențele practice, pregătind studenții pentru piața muncii și oferindu-le oportunități extracurriculare care stimulează creativitatea, gândirea critică și networking-ul cu profesioniști din diverse domenii.",
         "domenii": [
@@ -131,7 +131,7 @@ export default [
         ],
     },
     {
-        "nume": "Asociatia copiii in sanul familiei",
+        "nume": "Asociația copiii în sânul familiei",
         "descriere":
             "Organizația oferă copiilor fără sprijin familial oportunitatea de a crește într-un mediu sigur, primitor și familial. Prin case și programe educative, copiii beneficiază de suport emoțional, social și academic, fiind încurajați să-și dezvolte abilitățile și să-și construiască un viitor stabil și armonios, cu șanse reale de integrare și autonomie",
         "domenii": ["protecție copii", "educație", "incluziune socială"],
@@ -146,9 +146,9 @@ export default [
         ],
     },
     {
-        "nume": "Asociatia Renasterea Spiritului Civic",
+        "nume": "Asociația Renașterea Spiritului Civic",
         "descriere":
-            "Educație pas cu pas este un proiect al Asociației Spiritului Civic, care sprijină regenerarea comunității urbane prin formarea unei generații de tineri responsabili, conștienți și implicați. Prin ateliere, dezbateri, proiecte comunitare și culturale, dezvoltă gândirea critică, reziliența, capitalul cultural și spiritul civic, transformând educația într-un proces aplicat și relevant",
+            "Educație pas cu pas este un proiect al Asociației Renașterea Spiritului Civic, care sprijină regenerarea comunității urbane prin formarea unei generații de tineri responsabili, conștienți și implicați. Prin ateliere, dezbateri, proiecte comunitare și culturale, dezvoltă gândirea critică, reziliența, capitalul cultural și spiritul civic, transformând educația într-un proces aplicat și relevant",
         "domenii": ["educație", "dezvoltare comunitară", "tineret"],
         "logo": "renasterea_spiritului_civic.png",
         "legaturi": [
@@ -177,7 +177,7 @@ export default [
         ],
     },
     {
-        "nume": "ACT Brasov",
+        "nume": "ACT Brașov",
         "descriere":
             "Asociația pentru Acțiune, Comunitate și Tineret – ACT este o organizație care sprijină tinerii să se implice activ în comunitate prin proiecte educaționale, civice și non-formale. ACT facilitează dezvoltarea personală și profesională, oferind oportunități de voluntariat și mobilitate internațională prin programe precum Erasmus+ și European Solidarity Corps, stimulând schimbul de experiențe și competențe interculturale",
         "domenii": [
@@ -193,9 +193,9 @@ export default [
         ],
     },
     {
-        "nume": "Zbor Hub Brasov",
+        "nume": "Zbor Hub Brașov",
         "descriere":
-            " Hub-ul oferă tinerilor între 14 și 24 de ani un spațiu educațional și creativ pentru dezvoltarea personală și profesională. Prin ateliere și workshop-uri pe teme precum antreprenoriat, digitalizare, educație financiară și sustenabilitate, participanții dobândesc competențe practice, descoperă pasiuni noi și învață prin experiență, într-un mediu colaborativ, prietenos și inspirațional",
+            "Hub-ul oferă tinerilor între 14 și 24 de ani un spațiu educațional și creativ pentru dezvoltarea personală și profesională. Prin ateliere și workshop-uri pe teme precum antreprenoriat, digitalizare, educație financiară și sustenabilitate, participanții dobândesc competențe practice, descoperă pasiuni noi și învață prin experiență, într-un mediu colaborativ, prietenos și inspirațional",
         "domenii": [
             "educație",
             "dezvoltare personală",
@@ -231,7 +231,7 @@ export default [
         ],
     },
     {
-        "nume": "Societatea Studenteasca de Chirurgie",
+        "nume": "Societatea Studențeasca de Chirurgie",
         "descriere":
             "Organizația sprijină studenții la medicină și tinerii medici în domeniul chirurgical prin workshop-uri practice, sesiuni științifice și activități educative. Membrii dobândesc experiență practică, competențe teoretice și dezvoltare profesională, pregătindu-se pentru cariera medicală într-un mediu colaborativ și organizat, cu mentorat și implicare directă în proiecte de învățare",
         "domenii": [
