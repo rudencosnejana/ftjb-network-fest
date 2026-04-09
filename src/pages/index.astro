@@ -10,19 +10,29 @@ import brasov from "@assets/brasov.svg";
 import retea from "@assets/retea.svg";
 import logo from "@assets/logo.png";
 
+import calendar from "@assets/calendar.svg";
+import ceas from "@assets/ceas.svg";
+import locatie from "@assets/locatie.svg";
+
 import participanti from "../content/participanti.js";
 import program from "../content/program.js";
-
-const sponsori = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
-
-const tw_p_x = "px-3 xl:px-26"
 ---
 
 <Layout>
     <Header />
 
+    <div class="fixed bottom-5 left-5 bg-blue-100 z-200 px-4 py-2 font-mono">
+        <span class="inline sm:hidden">xs</span>
+        <span class="hidden sm:inline md:hidden">sm</span>
+        <span class="hidden md:inline lg:hidden">md</span>
+        <span class="hidden lg:inline xl:hidden">lg</span>
+        <span class="hidden xl:inline">xl</span>
+    </div>
+
     <main>
-        <div class="relative overflow-hidden pt-48 md:pt-56 pb-26 min-h-screen">
+        <div
+            class="relative overflow-hidden pt-42 md:pt-[23vh] lg:pt-[25vh] pb-26 min-h-screen"
+        >
             <div class="absolute top-0 left-0 w-full h-full">
                 <img
                     loading={"eager"}
@@ -36,41 +46,82 @@ const tw_p_x = "px-3 xl:px-26"
             >
             </div>
             <div
-                class:list={[ "text-white text-[1.55rem] md:text-[2rem] lg:text-[2.75rem] z-10 w-full h-full", tw_p_x]}
+                class:list={[
+                    "flex flex-col items-center sm:items-start z-10 w-full h-full px-3 sm:px-10 xl:px-26",
+                    "text-white text-[1.55rem] md:text-[2rem] lg:text-[2.75rem]",
+                ]}
                 style="position: inherit"
             >
-                <div class="flex flex-col items-center md:block relative w-fit">
+                <div class="flex flex-col md:block relative w-fit">
                     <h1
-                        class="text-[3.15rem] md:text-[6rem] lg:text-[8rem] text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold"
+                        class:list={[
+                            "text-shadow-[0.66px_2.66px_15.49px_rgb(0_0_0_/_0.7)] font-extrabold",
+                            "text-[2.7rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7rem]",
+                        ]}
                     >
                         NETWORK FEST
                     </h1>
                     <Image
-                        class="absolute w-[180px] md:w-[290px] lg:w-[370px] left-1/2 top-11 md:top-22 lg:top-28 -translate-x-24 md:-translate-x-40 lg:-translate-x-50"
+                        class="absolute w-[125px] sm:w-[230px] md:w-[290px] lg:w-[330px] left-1/2 top-9.5 sm:top-16.5 md:top-20 lg:top-26 -translate-x-13 sm:-translate-x-27 md:-translate-x-35 lg:-translate-x-35"
                         src={brasov}
                         width={370}
                         loading={"eager"}
                         alt=""
                     />
                 </div>
-                <p class="pt-26">Evenimentul care ne unește</p>
-                <div class="py-10">
-                    <time><b>25 aprilie 2026</b></time>
-                    <div>Interval orar: <b>11:00-16:00</b></div>
+
+                <div class="pt-10 sm:pt-1">
+                    Ediția a II-a
                 </div>
-                <p>Locația: Afi MALL, zona Food Court</p>
+
+                <div
+                    class="flex flex-col pb-10 text-xl sm:text-3xl md:text-4xl"
+                >
+                    <div class="flex flex-col py-18 sm:py-32 sm:py-18  items-center sm:block gap-y-2">
+                        <span>Evenimentul care unește</span> <span><b
+                            >asociațiile</b> cu <b>tinerii</b></span>
+                        <span>din <b>Brașov</b></span>
+                    </div>
+
+                    <div
+                        class="text-center sm:text-left flex flex-col sm:flex-row gap-4 sm:gap-10"
+                    >
+                        <div class="flex flex-row items-center">
+                            <Image
+                                class="w-7 h-7 pr-2"
+                                alt=""
+                                src={calendar}
+                            /><time><b class="leading-none"
+                                >25 aprilie 2026</b></time>
+                        </div>
+                        <div class="flex flex-row items-center">
+                            <Image class="h-7 w-7 pr-2" alt="" src={ceas} /><b
+                                class="leading-none"
+                            >11:00-16:00</b>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row pt-4 sm:pt-8 items-center">
+                        <Image
+                            class="h-7 w-7 pr-2 inline"
+                            src={locatie}
+                            alt=""
+                        /><b class="leading-none"
+                        >AFI Brașov, Esplanada, <wbr>etajul 1</b>
+                    </div>
+                </div>
             </div>
-                    <Image
-                        class="absolute bottom-0 right-0 z-20"
-                        src={retea}
-                        loading={"eager"}
-                        alt=""
-                    />
+            <Image
+                class="absolute bottom-0 right-0 z-20"
+                src={retea}
+                loading={"eager"}
+                alt=""
+            />
         </div>
 
-        <div class="lg:py-8 bg-purple-50" style="font-size: 18px">
+        <div class="lg:py-12 bg-purple-50" style="font-size: 18px">
             <div
-                class="w-full lg:w-230 m-auto lg:border lg:border-olive-200 lg:rounded-xl overflow-hidden"
+                class="w-full lg:w-230 m-auto lg:border lg:border-primary/20 lg:rounded-xl overflow-hidden"
             >
                 <h1
                     id="program"
@@ -78,18 +129,35 @@ const tw_p_x = "px-3 xl:px-26"
                 >
                     Program
                 </h1>
-                <div class="bg-white divide-y-1 py-2 divide-olive-200">
+                <div class="flex flex-col gap-6 bg-white divide-y-1 py-2 divide-olive-200">
                     {
                         program.map((p) => (
                             <div
-                                class="bg-white px-3 lg:px-0 py-3 lg:w-210 m-auto text-primary"
+                                class="bg-white px-3 sm:px-10 lg:px-0 py-3 lg:w-210 m-auto text-primary"
                             >
-                                <div class="divide-x-1 flex flex-row pb-2">
-                                    <b class="block min-w-[11ch]">{p.timp}</b>
-                                    <sb class="pl-3">{p.titlu}</sb>
+                                <div class="flex flex-row pb-3 justify-between">
+                                    <div class="flex flex-row items-center">
+                                        <b
+                                            class="block min-w-[10ch] border-r-1"
+                                        >{p.timp}</b>
+                                        <span class="pl-3 font-semibold">{
+                                            p.titlu
+                                        }</span>
+                                    </div>
                                 </div>
+
+                                {
+                                    (!p.public) &&
+    (
+                                        <div
+                                            class="text-secondary leading-none text-sm font-semibold border rounded-full py-1 px-3 flex flex-row items-center mb-4"
+                                        >
+                                            Eveniment închis publicului
+                                        </div>
+                                    )
+                                }
                                 <div
-                                    class="text-black/70 thin"
+                                    class="text-black/70"
                                     set:html={p.descr}
                                 >
                                 </div>
@@ -103,55 +171,88 @@ const tw_p_x = "px-3 xl:px-26"
         <div style="font-size: 18px">
             <div class="bg-purple-50">
                 <h1
-                    id="participanti"
-                    class="text-primary text-xl font-bold bg-white text-center p-10  lg:rounded-t-[3rem] overflow-hidden"
+                    id="tombola"
+                    class="text-primary text-xl font-bold bg-white text-center p-10 lg:rounded-t-[3rem] overflow-hidden border-t-1 shadow-lg/50 shadow-primary/10 border-primary/20"
                 >
-                    Participanți
+                    Tombolă pentru participanți
                 </h1>
                 <div
-                    class="flex flex-row justify-center divide-y-1 divide-olive-100 flex-wrap bg-white gap-4"
+                    class="bg-white gap-4"
                 >
-                    {
-                        participanti.map((
-                            p,
-                        ) => (
-                            <ParticipantCard
-                                title={p.nume}
-                                description={p.descriere}
-                                domains={p.domenii}
-                                logo={p.logo}
-                                links={p.legaturi}
-                            />
-                        ))
-                    }
+                    <div class="flex flex-col gap-4 px-3 lg:px-0 w-full lg:w-210 m-auto">
+                        <p>
+                            Participă la un joc de tip BINGO.
+                        </p>
+                        <p>
+                            Colectează 10 stickere de la organizațiile participante
+                            și câștigi oportunitatea de a participa la Tombolă!
+                        </p>
+                        <p>
+                            Extragerea câștigătorilor va avea loc la finalul
+                            evenimentului. Rezultatele vor fi anunțate pe pagina
+                            <a class="text-primary hover:text-secondary underline" href="https://www.instagram.com/ftj.brasov24">Instagram a Federației Tinerilor din Județul Brașov</a>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div style="font-size: 18px">
+            <h1
+                id="participanti"
+                class="text-primary text-xl font-bold bg-white text-center p-10"
+            >
+                Participanți
+            </h1>
+            <div
+                class="flex flex-row justify-center divide-y-1 divide-olive-100 flex-wrap bg-white gap-4"
+            >
+                {
+                    participanti.map((
+                        p,
+                    ) => (
+                        <ParticipantCard
+                            title={p.nume}
+                            description={p.descriere}
+                            domains={p.domenii}
+                            logo={p.logo}
+                            links={p.legaturi}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+
         <div>
-            <div class="px-3 pt-22 pb-11 w-full lg:w-240 m-auto flex flex-col items-center">
-                <Image
-                    src={logo}
-                    class="object-contain"
-                    class="pb-10"
-                    height={64}
-                    alt=""
-                />
+            <div
+                class="px-3 sm:px-10 xl:px-26 pt-22 pb-11 w-full lg:w-240 m-auto flex flex-col items-start sm:items-center"
+            >
+                <div class="flex flex-col items-start">
+                    <h1 class="pb-1 text-secondary font-semibold text-xl">Organizator</h1>
+                    <Image
+                        src={logo}
+                        class="object-contain object-left md:object-center pb-10 md:px-6 h-20 md:h-fit"
+                        height={64}
+                        alt=""
+                    />
+                </div>
                 <div class="flex flex-col gap-y-4">
                     <div>
-                        Federația Tinerilor din Județul Brașov este o
+                        <span class="font-semibold">Federația Tinerilor din Județul Brașov</span> este o
                         organizație apolitică și non-profit care reunește
                         ONG-uri de tineret și susține implicarea tinerilor
                         (16-35 ani).
                     </div>
                     <div>
-                        Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus
-                        Brașov, Meraki Impact Club, Asociația Generației
-                        Creative.
-                    </div>
-                    <div>
-                        Membri observatori: Myndself Brașov, BEST Brașov, AIESEC
-                        Brașov, BSPP. Brașov
+                        <div>
+                            Membri fondatori: ATB Brașov, ACT Brașov, Empower Plus
+                            Brașov, Meraki Impact Club, Asociația Generației
+                            Creative.
+                        </div>
+                        <div>
+                            Membri observatori: Myndself Brașov, BEST Brașov, AIESEC
+                            Brașov, BSPP. Brașov
+                        </div>
                     </div>
                     <div>
                         Activăm pe 6 piloni: educație, participare civică,
@@ -164,11 +265,11 @@ const tw_p_x = "px-3 xl:px-26"
     </main>
 
     <footer class="pt-11 pb-12 bg-purple-50">
-        <div class="flex flex-row w-full lg:w-400 m-auto px-3">
+        <div class="py-6 lg:py-8 px-3 xl:px-26 flex flex-row w-full">
             <div class="w-full md:w-[50ch]">
                 <div class="relative w-fit pb-7">
                     <h1
-                        class="text-[3rem] text-shadow-[0.66px_2.66px_5.49px_rgb(0_0_0_/_0.3)] font-extrabold"
+                        class="text-[2.7rem] sm:text-[3rem] text-shadow-[0.66px_2.66px_5.49px_rgb(0_0_0_/_0.3)] font-extrabold"
                     >
                         NETWORK FEST
                     </h1>
