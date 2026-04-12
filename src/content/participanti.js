@@ -3,7 +3,7 @@ export default [
     {
         "nume": "ATB Brașov",
         "descriere":
-            "Asociația reprezintă și apără interesele elevilor și studenților basarabeni din Brașov, promovând drepturile academice și valorile tradiționale. Prin activități educative, culturale și sociale, organizația sprijină integrarea tinerilor elevi și studenți basarabeni, dezvoltarea abilităților și crearea unui cadru în care fiecare student poate valorifica potențialul său și se poate conecta cu comunitatea.",
+            "ATB Brașov reprezintă și apără interesele elevilor și studenților basarabeni din Brașov, promovând drepturile academice și valorile tradiționale. Prin activități educative, culturale și sociale, organizația sprijină integrarea tinerilor elevi și studenți basarabeni, dezvoltarea abilităților și crearea unui cadru în care fiecare student poate valorifica potențialul său și se poate conecta cu comunitatea.",
         "domenii": ["educație", "advocacy", "cultură"],
         "logo": "atbbrasov.png",
         "legaturi": [
@@ -30,7 +30,7 @@ export default [
     {
         "nume": "Crucea roșie",
         "descriere":
-            "Organizația sprijină persoanele vulnerabile în situații de criză și dezastre, protejând sănătatea și viața, și promovând respectul pentru demnitatea umană. Prin programe de prevenție, voluntariat și asistență socială, Crucea Roșie contribuie la alinarea suferinței și susține comunități, indiferent de naționalitate, rasă, sex, religie sau apartenență socială, promovând solidaritatea și implicarea civică.",
+            "Crucea Roșie sprijină persoanele vulnerabile în situații de criză și dezastre, protejând sănătatea și viața, și promovând respectul pentru demnitatea umană. Prin programe de prevenție, voluntariat și asistență socială, Crucea Roșie contribuie la alinarea suferinței și susține comunități, indiferent de naționalitate, rasă, sex, religie sau apartenență socială, promovând solidaritatea și implicarea civică.",
         "domenii": ["asistență umanitară", "sănătate", "voluntariat"],
         "logo": "crucea_rosie.jpg",
         "legaturi": [
@@ -45,7 +45,7 @@ export default [
     {
         "nume": "Myndself Hub",
         "descriere":
-            "Myndself oferă tinerilor programe de educație non-formală care dezvoltă gândirea critică, comunicarea și luarea deciziilor. Prin workshop-uri și activități practice, tinerii învață cum să gestioneze provocările vieții, să-și dezvolte abilitățile personale și sociale și să se pregătească pentru viitor, într-un mod interactiv și aplicat, cu accent pe experiențe care facilitează creșterea, învățarea și responsabilitatea.",
+            "Myndself Hub oferă tinerilor programe de educație non-formală care dezvoltă gândirea critică, comunicarea și luarea deciziilor. Prin workshop-uri și activități practice, tinerii învață cum să gestioneze provocările vieții, să-și dezvolte abilitățile personale și sociale și să se pregătească pentru viitor, într-un mod interactiv și aplicat, cu accent pe experiențe care facilitează creșterea, învățarea și responsabilitatea.",
         "domenii": ["educație non-formală", "dezvoltare personală", "tineret"],
         "logo": "myndself.png",
         "legaturi": [
@@ -133,7 +133,7 @@ export default [
     {
         "nume": "Asociația copiii în sânul familiei",
         "descriere":
-            "Organizația oferă copiilor fără sprijin familial oportunitatea de a crește într-un mediu sigur, primitor și familial. Prin case și programe educative, copiii beneficiază de suport emoțional, social și academic, fiind încurajați să-și dezvolte abilitățile și să-și construiască un viitor stabil și armonios, cu șanse reale de integrare și autonomie",
+            "Asociația “Copiii în Sânul Familiei” oferă copiilor fără sprijin familial oportunitatea de a crește într-un mediu sigur, primitor și familial. Prin case și programe educative, copiii beneficiază de suport emoțional, social și academic, fiind încurajați să-și dezvolte abilitățile și să-și construiască un viitor stabil și armonios, cu șanse reale de integrare și autonomie",
         "domenii": ["protecție copii", "educație", "incluziune socială"],
         "logo": "copii_in_sinul_familiei.png",
         "legaturi": [
@@ -156,9 +156,9 @@ export default [
         ],
     },
     {
-        "nume": "Centru de studii vedice",
+        "nume": "Centru de Studii Vedice",
         "descriere":
-            "Centrul oferă programe de dezvoltare personală și explorare a înțelepciunii vedice, prin workshop-uri, sesiuni de discuții și evenimente culturale. Participanții își dezvoltă claritatea mentală, echilibrul emoțional și sensul personal, experimentând spiritualitatea aplicată vieții moderne. Se promovează valori precum compasiunea, disciplina interioară și autenticitatea",
+            "Centrul de Studii Vedice oferă programe de dezvoltare personală și explorare a înțelepciunii vedice, prin workshop-uri, sesiuni de discuții și evenimente culturale. Participanții își dezvoltă claritatea mentală, echilibrul emoțional și sensul personal, experimentând spiritualitatea aplicată vieții moderne. Se promovează valori precum compasiunea, disciplina interioară și autenticitatea",
         "domenii": ["dezvoltare personală", "educație spirituală", "cultură"],
         "logo": "iskon.png",
         "legaturi": [
@@ -179,7 +179,7 @@ export default [
     {
         "nume": "ACT Brașov",
         "descriere":
-            "Asociația pentru Acțiune, Comunitate și Tineret – ACT este o organizație care sprijină tinerii să se implice activ în comunitate prin proiecte educaționale, civice și non-formale. ACT facilitează dezvoltarea personală și profesională, oferind oportunități de voluntariat și mobilitate internațională prin programe precum Erasmus+ și European Solidarity Corps, stimulând schimbul de experiențe și competențe interculturale",
+            "Asociația pentru Acțiune, Comunitate și Tineret (ACT) este o organizație care sprijină tinerii să se implice activ în comunitate prin proiecte educaționale, civice și non-formale. ACT facilitează dezvoltarea personală și profesională, oferind oportunități de voluntariat și mobilitate internațională prin programe precum Erasmus+ și European Solidarity Corps, stimulând schimbul de experiențe și competențe interculturale",
         "domenii": [
             "educație non-formală",
             "tineret",
@@ -233,7 +233,7 @@ export default [
     {
         "nume": "Societatea Studențeasca de Chirurgie",
         "descriere":
-            "Organizația sprijină studenții la medicină și tinerii medici în domeniul chirurgical prin workshop-uri practice, sesiuni științifice și activități educative. Membrii dobândesc experiență practică, competențe teoretice și dezvoltare profesională, pregătindu-se pentru cariera medicală într-un mediu colaborativ și organizat, cu mentorat și implicare directă în proiecte de învățare",
+            "Societatea Studențeasca de Chirurgie sprijină studenții la medicină și tinerii medici în domeniul chirurgical prin workshop-uri practice, sesiuni științifice și activități educative. Membrii dobândesc experiență practică, competențe teoretice și dezvoltare profesională, pregătindu-se pentru cariera medicală într-un mediu colaborativ și organizat, cu mentorat și implicare directă în proiecte de învățare",
         "domenii": [
             "educație medicală",
             "chirurgie",
